@@ -14,6 +14,22 @@ To setup VLC, do the following:
 - Write "/Users/yourname/vlc.sock" in the UNIX socket ... field (replace yourname with your user name)
 - Press save and restart VLC
 
+Installation
+------------
+
+To install the library, follow these instructions:
+
+- Open Terminal
+- `cd` into your OpenFrameworks addons folder (e.g. `cd Projects/of_prerelease_v007/addons`)
+- Clone the repo down: `git clone git://github.com/runemadsen/ofxVLCRemote.git`
+
+Now in the project where you want to use the library:
+
+- Right click the "addons" folder in the XCode menu
+- Choose "Add Files To ..."
+- Find the "src" folder inside `/addons/ofxVLCRemote`
+- include the header file in your project: `#include "ofxVLCRemote.h"`
+
 Example
 -------
 
