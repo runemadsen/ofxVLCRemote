@@ -14,6 +14,7 @@ void ofxVLCRemote::run(string command)
 {
     string cmd = "/bin/echo -n  '";
     cmd.append(command);
-    cmd.append("' | nc -U /Users/rune/vlc.sock");
+    cmd.append("' | nc -U ");
+		cmd.append(_unix_socket);
     system(cmd.c_str());
 }
