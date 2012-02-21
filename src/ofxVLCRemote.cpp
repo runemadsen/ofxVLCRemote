@@ -1,11 +1,19 @@
+#include "ofxVLCRemote.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <iostream>
+
 ofxVLCRemote::ofxVLCRemote() {}
 
-ofxVLCRemote::setup(string unix_socket);
+void ofxVLCRemote::setup(string unix_socket)
 {
 	_unix_socket = unix_socket;
 }
 
-ofxVLCRemote::run(string command);
+void ofxVLCRemote::run(string command)
 {
-	system("/bin/echo -n  '"+command+"' | nc -U /Users/rune/vlc.sock");
+    string cmd = "/bin/echo -n  '";
+    cmd.append(command);
+    cmd.append("' | nc -U /Users/rune/vlc.sock");
+    system(cmd.c_str());
 }
